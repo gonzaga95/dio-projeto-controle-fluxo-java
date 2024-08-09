@@ -1,4 +1,4 @@
 package edu.dio.excecao;
 
-public class ParametrosInvalidosException {
+public class ParametrosInvalidosException extends Exception {
 }
