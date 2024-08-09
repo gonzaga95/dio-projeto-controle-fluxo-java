@@ -9,21 +9,21 @@ public class Contador {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite o primeiro parâmetro");
+        System.out.println("Digite o primeiro parâmetro: ");
         int parametroUm = sc.nextInt();
-        System.out.println("Digite o segundo parâmetro");
+        System.out.println("Digite o segundo parâmetro: ");
         int parametroDois = sc.nextInt();
 
         try {
             contar(parametroUm, parametroDois);
         } catch (ParametrosInvalidosException e){
-            System.out.println("O primeiro parâmetro não pode ser menor que o segundo");
+            System.out.println("O segundo parâmetro deve ser maior que o primeiro. Execute novamente");
         }
 
     }
 
     static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
-        if (parametroUm < parametroDois) {
+        if (parametroUm > parametroDois) {
             throw new ParametrosInvalidosException();
         }
 
